@@ -1,5 +1,5 @@
 var expect = require('chai').expect;
-var _ = require('lodash');
+//var _ = require('lodash');
 var Board = require('../lib/board');
 
 describe('Board', function() {
@@ -49,7 +49,7 @@ describe('Board', function() {
       [3,96,1,12]
     ];
 
-    expect(board.getScore(board.grid)).to.eql(840)
+    expect(board.getScore()).to.eql(840)
   });
 
   it('can return the highets value on the grid', function() {
@@ -88,5 +88,4 @@ describe('Board', function() {
 
     expect(board.deck.length).to.eql(13)
   })
-
 });
