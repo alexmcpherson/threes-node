@@ -1,9 +1,9 @@
 var row = require('../lib/row');
 var expect = require('chai').expect;
 
-describe('row', function() {
+describe('Row', function() {
 
-  it('combine works as expected', function() {
+  it('can combine tiles properly', function() {
     expect(row.combine(0, 1)).to.eql(1);
     expect(row.combine(1, 1)).to.eql(-1);
     expect(row.combine(2, 1)).to.eql(3);
@@ -15,7 +15,7 @@ describe('row', function() {
   });
 
   it('correctly picks out rows that can be shifted right', function() {
-    var grid = [ 
+    var grid = [
       [2,0,0,3],
       [0,3,3,0],
       [0,0,6,6],
@@ -28,7 +28,7 @@ describe('row', function() {
   });
 
   it('correctly shifts a row to the right', function() {
-    var grid = [ 
+    var grid = [
       [2,0,0,3],
       [0,3,3,0],
       [0,0,6,6],
